@@ -1,19 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextField"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonSetTextColorToBlack"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Чёрный текст" />
+        <Button
+            android:id="@+id/buttonSetTextColorToRed"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Красный текст" />
+        <Button
+            android:id="@+id/buttonSetTextSizeTo8SP"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Размер - 8sp" />
+        <Button
+            android:id="@+id/buttonSetTextSizeTo24SP"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Размер - 24sp" />
+        <Button
+            android:id="@+id/buttonBackgroundColorToWhite"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Белый фон" />
+        <Button
+            android:id="@+id/buttonBackgroundColorToYellow"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Жёлтый фон" />
+    </GridLayout>
+</LinearLayout>
